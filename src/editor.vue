@@ -10,6 +10,9 @@
   import _Quill from 'quill'
   import defaultOptions from './options'
   const Quill = window.Quill || _Quill
+  import Link from 'quill/formats/link';
+  Link.PROTOCOL_WHITELIST = ["hello"]
+  console.log(Link.PROTOCOL_WHITELIST)
 
   // pollfill
   if (typeof Object.assign != 'function') {
